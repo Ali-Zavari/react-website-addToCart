@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import heroBcg from '../assets/first.jpg'
-import heroBcg2 from '../assets/second.jpg'
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import heroBcg from "../assets/first.jpg";
+import heroBcg2 from "../assets/second.jpg";
 const Hero = () => {
   return (
-    <Wrapper className='section-center'>
-      <article className='content'>
+    <Wrapper className="section-center">
+      <article className="content">
         <h1>
           design your <br />
           comfort zone
@@ -17,17 +17,31 @@ const Hero = () => {
           aperiam odio ducimus, obcaecati libero et quia tempora excepturi quis
           alias?
         </p>
-        <Link to='/products' className='btn hero-btn'>
-          بزن بریم خرید 
+        <Link to="/products" className="btn hero-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6 svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"
+            />
+          </svg>
+          بزن بریم خرید
         </Link>
       </article>
-      <article className='img-container'>
-        <img src={heroBcg} alt='nice table' className='main-img' />
-        <img src={heroBcg2} alt='person working' className='accent-img' />
+      <article className="img-container">
+        <img src={heroBcg} alt="nice table" className="main-img" />
+        <img src={heroBcg2} alt="person working" className="accent-img" />
       </article>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   min-height: 60vh;
@@ -36,7 +50,9 @@ const Wrapper = styled.section`
   .img-container {
     display: none;
   }
-
+  .svg {
+    width: 30px;
+  }
   p {
     line-height: 2;
     max-width: 45em;
@@ -57,6 +73,8 @@ const Wrapper = styled.section`
     .hero-btn {
       padding: 0.75rem 1.5rem;
       font-size: 1rem;
+      display: flex !important;
+      max-width: 210px;
     }
     .img-container {
       display: block;
@@ -79,7 +97,7 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
     }
     .img-container::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 10%;
       height: 80%;
@@ -89,6 +107,6 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
     }
   }
-`
+`;
 
-export default Hero
+export default Hero;

@@ -73,7 +73,7 @@ const SingleProductPage = () => {
             </p>
             <p className='info'>
               <span>شماره کد :</span>
-              {id}
+              {sku}
             </p>
             <p className='info'>
               <span>نام تجاری :</span>

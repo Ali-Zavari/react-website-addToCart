@@ -10,7 +10,7 @@ const CartButton = () => {
   const { total_items, clearCart } = useCartContext()
   const { loginWithRedirect, myUser, logout } = useUserContext()
   return (
-    <Wrapper className='cart-btn-wrapper'>
+    <Wrapper >
       <Link to='/cart' className='cart-btn' onClick={closeSidebar}>
         سبدخرید
         <span className='cart-container'>
@@ -28,7 +28,8 @@ const CartButton = () => {
             logout({ returnTo: window.location.origin })
           }}
         >
-           خروج <FaUserMinus />
+           خروج 
+           <span className='cart-container'><FaUserMinus /></span>
         </button>
       ) : (
         <button type='button' className='auth-btn' onClick={loginWithRedirect}>
@@ -47,11 +48,10 @@ const Wrapper = styled.div`
 
   .cart-btn {
     color: var(--clr-grey-1);
-    font-size: 1.5rem;
     letter-spacing: var(--spacing);
     color: var(--clr-grey-1);
     display: flex;
-
+    font-size:1.5rem !important ;
     align-items: center;
   }
   .cart-container {
@@ -83,7 +83,9 @@ const Wrapper = styled.div`
     align-items: center;
     background: transparent;
     border-color: transparent;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
+    font-weight:bold ;
+    font-family: iransans ;
     cursor: pointer;
     color: var(--clr-grey-1);
     letter-spacing: var(--spacing);

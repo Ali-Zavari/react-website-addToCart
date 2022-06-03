@@ -11,8 +11,11 @@ const Contact = () => {
             sint unde quaerat ratione soluta veniam provident adipisci cumque
             eveniet tempore?
           </p>
-          <form className='contact-form'>
+          <form className='contact-form'
+            action="https://formspree.io/f/mnqwwrvy"
+            method="POST">
             <input
+              name='_replyto'
               dir='rtl'
               type='email'
               className='form-input'
